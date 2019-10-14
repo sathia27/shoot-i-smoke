@@ -5,10 +5,7 @@ jobs:
     name: Shoot-I-Smoke
     runs-on: ubuntu-latest
     steps:
-    - name: Yarn install, Lint
-      run: |
-        yarn install
-        yarn lint
-
+    - name: Yarn Lint
+      run: yarn lint
     - name: Yarn Test
       run: yarn test
