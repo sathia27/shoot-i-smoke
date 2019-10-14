@@ -1,0 +1,18 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    name: Shoot-I-Smoke
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: sathia27/shoot-i-smoke@v1
+    - name: Yarn install, Lint 
+      run: |
+        yarn install
+        yarn lint
+    - name: Yarn Test
+      run: |
+        yarn test
